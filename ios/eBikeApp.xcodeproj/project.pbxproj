@@ -17,6 +17,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* eBikeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* eBikeAppTests.m */; };
+		552A06DE23C24E340087F377 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A06DD23C24E340087F377 /* File.swift */; };
 		6327EB20E0A5FF0F2B64B6B6 /* libPods-eBikeApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF9597FA74EB0FFF608B90B /* libPods-eBikeApp-tvOSTests.a */; };
 		756B98DCBB1A1A9B1D62926A /* libPods-eBikeAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D10B47126E16ED4EB7500951 /* libPods-eBikeAppTests.a */; };
 		EFC411C3546CDF00236BE074 /* libPods-eBikeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37B214F5472AAD39C3A1C4 /* libPods-eBikeApp.a */; };
@@ -57,6 +58,8 @@
 		1E744EEAC83B328ABB34D2BA /* Pods-eBikeApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eBikeApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-eBikeApp-tvOSTests/Pods-eBikeApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* eBikeApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eBikeApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* eBikeApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eBikeApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		552A06DC23C24E330087F377 /* eBikeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eBikeApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		552A06DD23C24E340087F377 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = eBikeApp/File.swift; sourceTree = "<group>"; };
 		5C6D211A71987A44AC6B6A4C /* Pods-eBikeApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eBikeApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-eBikeApp-tvOS/Pods-eBikeApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		5F37B214F5472AAD39C3A1C4 /* libPods-eBikeApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eBikeApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF9597FA74EB0FFF608B90B /* libPods-eBikeApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eBikeApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				552A06DD23C24E340087F377 /* File.swift */,
+				552A06DC23C24E330087F377 /* eBikeApp-Bridging-Header.h */,
 			);
 			name = eBikeApp;
 			sourceTree = "<group>";
@@ -148,7 +153,6 @@
 				01FDFA2A26EEC850E381C2B9 /* Pods-eBikeAppTests.debug.xcconfig */,
 				8E9758B88874A5AE846F49D6 /* Pods-eBikeAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -291,6 +295,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1000;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -529,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				552A06DE23C24E340087F377 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01FDFA2A26EEC850E381C2B9 /* Pods-eBikeAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E9758B88874A5AE846F49D6 /* Pods-eBikeAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = eBikeAppTests/Info.plist;
@@ -626,6 +636,7 @@
 			baseConfigurationReference = F46111F01F87AD21456198DE /* Pods-eBikeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = eBikeApp/Info.plist;
@@ -637,6 +648,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = eBikeApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "eBikeApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,6 +660,7 @@
 			baseConfigurationReference = E4B577DC49D4CAE68E4849BC /* Pods-eBikeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = eBikeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +671,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = eBikeApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "eBikeApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
