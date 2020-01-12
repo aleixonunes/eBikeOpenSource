@@ -39,6 +39,10 @@ target 'eBikeApp' do
 
   pod 'react-native-ble-plx', :path => '../node_modules/react-native-ble-plx'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
   target 'eBikeAppTests' do
     inherit! :search_paths
     # Pods for testing

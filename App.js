@@ -8,24 +8,67 @@
 
 import React from 'react';
 import {
-  BleManager
-} from 'react-native-ble-plx';
+  createSwitchNavigator,
+  createAppContainer
+} from 'react-navigation';
+
 import {
+  createBottomTabNavigator
+} from 'react-navigation-tabs'
+
+import {
+  StyleSheet,
   View,
   Text
 } from 'react-native';
 
-import Bluetooth from './Bluetooth';
+import BluetoothScreen from './src/screens/BluetoothScreen';
+import WelcomeScreen from './src/screens/WelcomeScreen';
 
-const App: () => React$Node = () => {
-  return ( <
-    View >
-    <
-    Bluetooth / >
-    <
-    /View>
-  );
+const AppNavigator = createBottomTabNavigator(
+  {
+    Bluetooth: {
+      screen: BluetoothScreen}
+    //   ,
+    // Settings: {
+    //   screen: SettingsScreen
+    // }
+  }
+);
 
-};
+const InitialNavigator = createSwitchNavigator({
+  Welcome: WelcomeScreen,
+  App: AppNavigator
+});
+
+const AppContainer = createAppContainer(InitialNavigator);
+
+class App extends React.Component {
+
+  render() {
+    return (
+    <AppContainer />
+    );
+  }
+}
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});

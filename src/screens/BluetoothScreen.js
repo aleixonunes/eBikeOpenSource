@@ -6,7 +6,7 @@ import {
 
 import {BleManager} from 'react-native-ble-plx';
 
-export default class Bluetooth extends Component{
+export default class BluetoothScreen extends Component{
   constructor() {
     super()
     this.manager = new BleManager()
