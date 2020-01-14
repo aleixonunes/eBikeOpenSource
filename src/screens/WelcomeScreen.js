@@ -1,5 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import colors from '../res/colors.js'
+import images from '../res/images.js'
+import strings from '../res/strings.js'
 
 class WelcomeScreen extends React.Component {
   performTimeConsumingTask = async() => {
@@ -23,8 +26,9 @@ class WelcomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.viewStyles}>
+        <Image source={images.bike} />
         <Text style={styles.textStyles}>
-          eBike OpenSource
+          {strings.eBikeOpenSource}
         </Text>
       </View>
     );
@@ -36,11 +40,14 @@ const styles = {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'orange'
+    backgroundColor: colors.teal300
   },
   textStyles: {
-    color: 'white',
-    fontSize: 40,
+    position: 'absolute',
+    bottom: 0,
+    marginBottom: 4,
+    color: colors.teal50,
+    fontSize: 20,
     fontWeight: 'bold'
   }
 }

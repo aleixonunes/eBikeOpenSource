@@ -24,15 +24,14 @@ import {
 
 import BluetoothScreen from './src/screens/BluetoothScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen';
+import SettingsScreen from './src/screens/SettingsScreen';
 
 const AppNavigator = createBottomTabNavigator(
   {
     Bluetooth: {
-      screen: BluetoothScreen}
-    //   ,
-    // Settings: {
-    //   screen: SettingsScreen
-    // }
+      screen: BluetoothScreen },
+    Settings: {
+      screen: SettingsScreen }
   }
 );
 
